@@ -33,6 +33,7 @@ class MainActivity : ComponentActivity() {
                 }
                 composable(route = "register") {
                     FacebookRegisterScreen()
+
                 }
             }
 
