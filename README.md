@@ -22,7 +22,7 @@
 
 ## 📫 Conecta conmigo
 
-- GitHub: dariza633@unab.edu.co(https://github.com/TU_USUARIO)
+- GitHub: dariza633@unab.edu.co
 
 ---
 
