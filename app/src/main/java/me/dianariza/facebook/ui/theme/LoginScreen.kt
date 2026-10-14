@@ -1,4 +1,5 @@
 package me.dianariza.facebook.ui.theme
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -20,6 +21,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
 // Colores oficiales de Facebook
 val FacebookBlue = Color(0xFF1877F2)
@@ -29,9 +31,8 @@ private val FacebookBorderGray = Color(0xFFCCD0D5)
 private val FacebookTextGray = Color(0xFF606770)
 private val FacebookDarkText = Color(0xFF1C1E21)
 
-@Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun FacebookLoginScreen() {
+fun FacebookLoginScreen(navController: NavController) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
@@ -84,7 +85,9 @@ fun FacebookLoginScreen() {
 
         // Botón Iniciar sesión
         Button(
-            onClick = {  },
+            onClick = {
+
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp),
@@ -140,7 +143,10 @@ fun FacebookLoginScreen() {
 
         // Botón Crear cuenta nueva
         Button(
-            onClick = {},
+
+            onClick = {
+                navController.navigate("register")
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp),
